@@ -1,0 +1,64 @@
+{
+  "status":true,
+  "settings": {
+    "notification_messages": {
+      "GENERAL_ERROR" : "Error. Unknown system response. Controller: ProductController",
+      "CANVAS_EMPTY": "Select product to perform this action",
+      "IMAGE_SIZE": "Image is too large (MAX SIZE: 300*300)",
+      "WORDCLOUD_EMPTY": "Please enter some words for generate wordcloud.",
+      "TYPE_NUMBER_REQUIRED": "Only numbers is allowed"
+    },
+    "request_url": {
+      "LOAD_PRODUCTS": "/emailedit/dummy_data/products/load_products.json",
+      "LOAD_PRODUCT_SUB_IMAGES": "/emailedit/dummy_data/products/",
+      "LOAD_GRAPHICS": "/emailedit/dummy_data/graphics/",
+      "LOAD_COLOR_SCHEME": "/emailedit/inc/theme.php",
+      "SAVE_DESIGN": "/emailedit/inc/save_design.php"
+    },
+    "general_settings": {
+      "loadMore":true,
+      "graphicsPage" : 1,
+      "defaultProductId" : 1,
+      "defaultProductImage" : "\/emailedit\/dummy_data\/products\/t_shirts\/20.png",
+      "quantity" : 1,
+      "defaultPrice" : 210,
+      "defaultCurrency" : "USD",
+      "defaultProductTitle" : "Tees Nues",
+      "qrCode" : "qrcode",
+      "enter_drawing_mode" : "Enter Drawing Mode",
+      "drawing_mode_selector" : "Pencil",
+      "drawing_line_width" : 20,
+      "drawing_color" : "#000000",
+      "drawing_line_shadow" : 0,
+      "primaryColor" : "#26C4E2",
+      "secondaryColor" : "#ffffff",
+      "graphicsCategory": "Flat Icons",
+      "graphicsCategories":{
+        "Flat Icons": "Flat Icons",
+        "ClipArts": "ClipArts",
+        "Flags": "Country Flags",
+        "Shapes": "Shapes",
+        "Quotes": "Quotes",
+        "Badges": "Badges",
+        "Zodiac": "Zodiac Sign"
+      },
+      "productCategories":{
+        "All" : "All",
+        "Clothes" : "Clothes",
+        "Bottles" : "Bottles",
+        "Others" : "Others"
+      },
+      "productByName": "DESC",
+      "productByNames":{
+        "ASC": "ASC",
+        "DESC": "DESC"
+      },
+      "predicate": "id",
+      "reverse": false
+    },
+    "social_settings" : {
+      "fb_app_id" : 101994476846984
+    }
+  },
+  "message":"Settings Loaded Successfully"
+}

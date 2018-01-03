@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" inkscape:version="0.48.1 r9760" sodipodi:docname="au.svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="400px"
+	 viewBox="0 0 600 400" enable-background="new 0 0 600 400" xml:space="preserve">
+<sodipodi:namedview  objecttolerance="10" gridtolerance="10" bordercolor="#666666" guidetolerance="10" borderopacity="1" pagecolor="#ffffff" inkscape:cy="256" inkscape:cx="256" showgrid="false" id="namedview3001" inkscape:zoom="0.98242188" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:current-layer="svg1" inkscape:window-maximized="1" inkscape:window-y="24" inkscape:window-x="0" inkscape:window-height="723" inkscape:window-width="1280">
+	</sodipodi:namedview>
+<g id="flag" inkscape:label="#g5216">
+	<rect id="rect124" x="1.683" y="1" fill="#000066" width="600" height="400"/>
+	<g id="g584" transform="scale(5.7613652,8.333333)">
+		<path id="path146" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0.292,0.12v2.556L53.584,22.98h6.708v-2.556L7,0.12H0.292
+			z M60.292,0.12v2.556L7,22.98H0.292v-2.556L53.584,0.12H60.292z"/>
+		<path id="path136" inkscape:connector-curvature="0" fill="#FFFFFF" d="M25.292,0.12v22.86h10V0.12H25.292z M0.292,7.74v7.62h60
+			V7.74H0.292z"/>
+		<path id="path141" inkscape:connector-curvature="0" fill="#CC0000" d="M0.292,9.264v4.572h60V9.264H0.292z M27.292,0.12v22.86h6
+			V0.12H27.292z"/>
+		<path id="path150" inkscape:connector-curvature="0" fill="#CC0000" d="M0.292,22.98l20-7.62h4.472l-20,7.62H0.292z M0.292,0.12
+			l20,7.62H15.82L0.292,1.824V0.12z M35.82,7.74l20-7.62h4.472l-20,7.62H35.82z M60.292,22.98l-20-7.62h4.472l15.528,5.916V22.98z"
+			/>
+	</g>
+	<polygon id="polygon589" fill="#FFFFFF" points="150.613,260.426 166.366,266.393 171.523,250.355 171.523,250.355 
+		176.681,266.393 192.434,260.426 183.112,274.456 197.599,283.053 180.817,284.514 183.127,301.199 171.523,288.988 
+		159.918,301.199 162.229,284.514 145.449,283.053 159.935,274.456 	"/>
+	<g id="g596" transform="matrix(6.9999103,0,0,6.9999103,-255.42775,119.74311)">
+		<polygon id="polygon590" fill="#FFFFFF" points="107.86,33.223 105.996,33.385 106.252,35.239 104.963,33.883 103.674,35.239 
+			103.93,33.385 102.066,33.223 103.675,32.268 102.64,30.709 104.39,31.372 104.963,29.59 104.963,29.59 105.536,31.372 
+			107.287,30.709 106.251,32.268 		"/>
+		<polygon id="polygon592" fill="#FFFFFF" points="111.284,-9.152 109.355,-8.985 109.621,-7.066 108.286,-8.47 106.952,-7.066 
+			107.218,-8.985 105.288,-9.152 106.954,-10.141 105.882,-11.754 107.693,-11.068 108.286,-12.912 108.286,-12.912 
+			108.879,-11.068 110.69,-11.754 109.619,-10.141 		"/>
+		<polygon id="polygon593" fill="#FFFFFF" points="97.601,5.19 95.917,5.336 96.149,7.011 94.985,5.786 93.82,7.011 94.052,5.336 
+			92.368,5.19 93.822,4.328 92.887,2.92 94.467,3.518 94.985,1.909 94.985,1.909 95.502,3.518 97.083,2.92 96.148,4.328 		"/>
+		<polygon id="polygon594" fill="#FFFFFF" points="119.213,-2.519 117.282,-2.351 117.548,-0.431 116.212,-1.836 114.878,-0.431 
+			115.143,-2.351 113.213,-2.519 114.879,-3.508 113.807,-5.122 115.619,-4.436 116.212,-6.281 116.212,-6.281 116.806,-4.436 
+			118.618,-5.122 117.545,-3.508 		"/>
+		<polygon id="polygon595" fill="#FFFFFF" points="110.341,5.526 109.522,6.034 109.752,5.268 109.016,4.477 109.977,4.407 
+			110.341,3.515 110.341,3.515 110.705,4.407 111.665,4.477 110.93,5.099 111.16,6.034 		"/>
+	</g>
+</g>
+</svg>

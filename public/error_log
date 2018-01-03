@@ -1,0 +1,35 @@
+[15-Sep-2017 21:20:33 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home1/utopspac/public_html/letterfromheaven/public/index.php on line 50
+[15-Sep-2017 21:46:06 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home1/utopspac/public_html/letterfromheaven/public/index.php on line 50
+[15-Sep-2017 23:55:09 America/Chicago] PHP Fatal error:  Uncaught ReflectionException: Class config does not exist in /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home1/u in /home1/utopspac/public_html/letterfromheaven/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[16-Sep-2017 00:03:47 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function php_info() in /home1/utopspac/public_html/letterfromheaven/public/test.php:2
+Stack trace:
+#0 {main}
+  thrown in /home1/utopspac/public_html/letterfromheaven/public/test.php on line 2
+[16-Sep-2017 00:03:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function php_info() in /home1/utopspac/public_html/letterfromheaven/public/test.php:2
+Stack trace:
+#0 {main}
+  thrown in /home1/utopspac/public_html/letterfromheaven/public/test.php on line 2
+[29-Nov-2017 14:06:21 UTC] PHP Fatal error:  Class 'App\Http\Controllers\site\EmailTemplate' not found in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/ShopFlowerController.php on line 36
+[29-Nov-2017 14:06:26 UTC] PHP Fatal error:  Class 'App\Http\Controllers\site\EmailTemplate' not found in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/ShopFlowerController.php on line 36
+[18-Dec-2017 05:49:54 UTC] PHP Fatal error:  Call to a member function getPriceSumWithConditions() on array in /home1/utopspac/public_html/letterfromheaven/vendor/darryldecode/cart/src/Darryldecode/Cart/Cart.php on line 537
+[21-Dec-2017 07:00:04 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[21-Dec-2017 17:31:11 UTC] PHP Fatal error:  Call to a member function getPriceSumWithConditions() on array in /home1/utopspac/public_html/letterfromheaven/vendor/darryldecode/cart/src/Darryldecode/Cart/Cart.php on line 537
+[22-Dec-2017 07:00:02 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[23-Dec-2017 07:00:03 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[24-Dec-2017 07:00:05 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[25-Dec-2017 07:00:06 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[26-Dec-2017 07:00:07 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[27-Dec-2017 07:00:05 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[28-Dec-2017 07:00:05 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[29-Dec-2017 07:00:04 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[30-Dec-2017 07:00:02 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[31-Dec-2017 07:00:03 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[01-Jan-2018 07:00:05 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31
+[02-Jan-2018 07:00:04 UTC] PHP Fatal error:  Call to a member function getTimestamp() on boolean in /home1/utopspac/public_html/letterfromheaven/app/Http/Controllers/site/EmailConfirmController.php on line 31

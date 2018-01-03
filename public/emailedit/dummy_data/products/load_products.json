@@ -1,0 +1,276 @@
+{
+   "status":true,
+   "products":[
+      {
+         "id":1,
+         "name":"Sport Tees",
+         "price":310,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/20.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/20.png",
+            "dummy_data/products/t_shirts/20-1.png",
+            "dummy_data/products/t_shirts/20-2.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":2,
+         "name":"RS Tees",
+         "price":210,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/16.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/16.png",
+            "dummy_data/products/t_shirts/16-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":3,
+         "name":"ZT Tees",
+         "price":210,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/1.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/1.png",
+            "dummy_data/products/t_shirts/1-1.png",
+            "dummy_data/products/t_shirts/1-2.png",
+            "dummy_data/products/t_shirts/1-3.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":4,
+         "name":"Hoodi",
+         "price":160,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/hood/12.png",
+         "sub_images":[
+            "dummy_data/products/hood/12.png",
+            "dummy_data/products/hood/12-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":5,
+         "name":"Round Tees",
+         "price":110,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/21.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/21.png",
+            "dummy_data/products/t_shirts/21-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":7,
+         "name":"Ladies Tees",
+         "price":70,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/22.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/22.png",
+            "dummy_data/products/t_shirts/22-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      }, 
+      {
+         "id":9,
+         "name":"White Shirt",
+         "price":100,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/23.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/23.png",
+            "dummy_data/products/t_shirts/23-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":10,
+         "name":"Tx Tees",
+         "price":460,
+         "category": "clothes",
+         "currency":"USD",
+         "image":"dummy_data/products/t_shirts/10.png",
+         "sub_images":[
+            "dummy_data/products/t_shirts/10.png",
+            "dummy_data/products/t_shirts/10-1.png",
+            "dummy_data/products/t_shirts/10-2.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":11,
+         "name":"XXX Wines",
+         "price":150,
+         "category": "bottles",
+         "currency":"USD",
+         "image":"dummy_data/products/bottles/16.png",
+         "sub_images":[
+            "dummy_data/products/bottles/16.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":12,
+         "name":"GU Beer",
+         "price":120,
+         "category": "bottles",
+         "currency":"USD",
+         "image":"dummy_data/products/bottles/17.png",
+         "sub_images":[
+            "dummy_data/products/bottles/17.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":13,
+         "name":"GU Wines",
+         "price":144,
+         "category": "bottles",
+         "currency":"USD",
+         "image":"dummy_data/products/bottles/9.png",
+         "sub_images":[
+            "dummy_data/products/bottles/9.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":14,
+         "name":"Hats",
+         "price":140,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/hats/14.png",
+         "sub_images":[
+            "dummy_data/products/hats/14.png",
+            "dummy_data/products/hats/14-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":15,
+         "name":"Greeting Card",
+         "price":20,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/greeting_cards/15.png",
+         "sub_images":[
+            "dummy_data/products/greeting_cards/15.png",
+            "dummy_data/products/greeting_cards/15-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":16,
+         "name":"X-press Card",
+         "price":60,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/business_card/11.png",
+         "sub_images":[
+            "dummy_data/products/business_card/11.png",
+            "dummy_data/products/business_card/11-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":17,
+         "name":"Greeting Card",
+         "price":160,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/greeting_cards/4.png",
+         "sub_images":[
+            "dummy_data/products/greeting_cards/4.png",
+            "dummy_data/products/greeting_cards/4-1.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":18,
+         "name":"Paper Bag",
+         "price":8,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/bag/18.png",
+         "sub_images":[
+            "dummy_data/products/bag/18.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":19,
+         "name":"KK Mugs",
+         "price":30,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/mugs/19.png",
+         "sub_images":[
+            "dummy_data/products/mugs/19.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":20,
+         "name":"Yix Handbag",
+         "price":70,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/bag/3.png",
+         "sub_images":[
+            "dummy_data/products/bag/3.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":21,
+         "name":"Xr Back Cover",
+         "price":160,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/phone_cases/5.png",
+         "sub_images":[
+            "dummy_data/products/phone_cases/5.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":22,
+         "name":"Cent Mugs",
+         "price":20,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/mugs/7.png",
+         "sub_images":[
+            "dummy_data/products/mugs/7.png",
+            "dummy_data/products/mugs/7-1.png",
+            "dummy_data/products/mugs/7-2.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":23,
+         "name":"Yu Mugs",
+         "price":90,
+         "category": "others",
+         "currency":"USD",
+         "image":"dummy_data/products/mugs/13.png",
+         "sub_images":[
+            "dummy_data/products/mugs/13.png"
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      }
+   ],
+   "message":"Products Loaded Successfully"
+}
