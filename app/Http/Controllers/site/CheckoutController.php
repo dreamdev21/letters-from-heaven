@@ -640,7 +640,6 @@ class CheckoutController extends Controller
         $cart_items = array();
         $total = 0;
         foreach ($carts as $cart) {
-//            print_r($cart);exit;
             $item = new Item();
             $item->setName($cart->name)
                 ->setCurrency('USD')
