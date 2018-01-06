@@ -165,8 +165,8 @@
                     <textarea class="form-control paginate" id="txtEditor"></textarea>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-4 text-left" style="margin-top: 20px;">
+                <div class="row" style="width:{{ $width }}px;margin: 0">
+                    <div class="col-xs-4 text-left" style="margin-top: 20px;margin-left:-15px;">
                         <input type="button" onclick="editemailSave()" class="btn-addcart" value="SAVE" id="addcart">
                     </div>
                     <div class="col-xs-4 text-center" style="margin-top: 20px;">
@@ -174,7 +174,7 @@
                             <button type="button" class="btn-addcart">Go Delivery</button>
                         </a>
                     </div>
-                    <div class="col-xs-4 text-right" style="margin-top: 20px;">
+                    <div class="col-xs-4 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
                         <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
                     </div>
                 </div>

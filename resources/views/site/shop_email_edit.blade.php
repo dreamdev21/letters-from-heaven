@@ -148,8 +148,8 @@ if($item->id == $template->id){
                 <div class="row" id="editorcontent" style="margin: 0;text-align: -webkit-center">
                     <textarea class="form-control paginate" id="txtEditor"></textarea>
                 </div>
-                <div class="row" style="margin: 0">
-                    <div class="col-xs-4 text-left" style="margin-top: 20px;">
+                <div class="row"  style="width:{{ $width }}px;margin: 0">
+                    <div class="col-xs-4 text-left" style="margin-top: 20px;margin-left:-15px;">
                         <input type="button" onclick="draft()" class="btn-addcart" value="SAVE AS DRAFT"
                                id="savedraft">
                     </div>
@@ -157,7 +157,7 @@ if($item->id == $template->id){
                         <input type="button" onclick="gotoDelivery()" class="btn-addcart" value="GO TO DELIVERY"
                                id="addcart">
                     </div>
-                    <div class="col-xs-4 text-right" style="margin-top: 20px;">
+                    <div class="col-xs-4 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
                         <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
                     </div>
                 </div>

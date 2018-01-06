@@ -94,6 +94,7 @@ h2.demo-text{font-family: 'Roboto', sans-serif!important; font-size:45px; font-w
   min-height:25px;
   padding:5px 0;
     margin-top: 80px;
+    z-index: 0;
   }
 #menuBarDiv div:first-child{margin-left:3px;} 
 #menuBarDiv .dropdown{float:left;}
