@@ -152,8 +152,7 @@ if($item->id == $template->id){
                                id="addcart">
                     </div>
                     <div class="col-xs-4 text-right" style="margin-top: 20px;">
-                        <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE"
-                               id="addcart">
+                        <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
                     </div>
                 </div>
             </div>

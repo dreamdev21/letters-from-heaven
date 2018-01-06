@@ -816,12 +816,13 @@ a>.panel-heading:hover{
 .btn-addcart{
     outline: none;
     border: 1px solid #e5e5e5;
+    width: 140px;
     border-radius: 0;
     font: 700 15px/39px 'PT Sans', sans-serif;
     color: #40919c;
     background: #fff;
     /*padding: 0 20px;*/
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     -moz-transition: all 0.4s ease 0s;
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;

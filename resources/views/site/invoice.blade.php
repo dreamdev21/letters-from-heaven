@@ -1,4 +1,3 @@
-<!-- saved from url=(0077)https://www.vistaprint.com/Sales/Taxes/ViewTaxInvoice.aspx?id=9248726035&rd=1 -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

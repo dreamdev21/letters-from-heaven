@@ -4009,7 +4009,7 @@ You should have received a copy of the GNU General Public License along with thi
             // 						// background-image : imageurl
             // 		 	}).appendTo(containerDiv);
 
-            var editor = $('<div class="Editor-editor" contenteditable="true" style="overflow: auto;background-image: url(' + imageurl + ');  padding-top:96px; padding-left:120px; padding-right:120px; padding-bottom:96px;height:' + editorheight + 'px;"></div>').appendTo(containerDiv);
+            var editor = $('<div class="Editor-editor" contenteditable="true" style="overflow: auto;text-align: left;background-image: url(' + imageurl + ');  padding-top:96px; padding-left:120px; padding-right:120px; padding-bottom:96px;height:' + editorheight + 'px;"></div>').appendTo(containerDiv);
             // var statusBar = $("<div/>", {
             //     id: "statusbar",
             //     class: "row-fluid",
