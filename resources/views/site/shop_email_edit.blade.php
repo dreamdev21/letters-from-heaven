@@ -138,7 +138,7 @@ if($item->id == $template->id){
     {{ csrf_field() }}
     <div class="container">
         <div class="row text-center" style="margin: 0;">
-            <div class="col-lg-12 nopadding" style="    text-align: -webkit-center;font-size: 18px;margin-top: 10px;">
+            <div class="col-lg-12 nopadding" style="text-align: -webkit-center;font-size: 18px;margin-top: 10px;">
                 <div class="row" id="editorcontent" style="margin: 0;text-align: -webkit-center">
                     <textarea class="form-control paginate" id="txtEditor"></textarea>
                 </div>

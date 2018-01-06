@@ -71,9 +71,7 @@
                         <li><a href="{{ url('/shop') }}">Shop</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="{{ url('/contact') }}">Contact Us</a></li>
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login/Register</a></li>
-                        @else
+                        @if (!Auth::guest())
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-expanded="false">
@@ -101,6 +99,9 @@
                                     </li>
                                 </ul>
                             </li>
+
+                        @else
+                            <li><a href="{{ route('login') }}">Login/Register</a></li>
                         @endif
                         <li><a href="/cart"><i class="fa fa-shopping-cart">
                                     @if(Cart::getContent()->count())

@@ -154,23 +154,23 @@
     {{ csrf_field() }}
     <div class="container">
         <div class="row" style="margin: 0;">
-            <div class="col-lg-12 nopadding" id="editorcontent"
-                 style="font-size: 18px;margin-top: 10px;">
+            <div class="col-lg-12 nopadding" style="text-align: -webkit-center;font-size: 18px;margin-top: 10px;">
                 <div class="row" id="editorcontent" style="margin: 0;">
                     <textarea class="form-control paginate" id="txtEditor"></textarea>
                 </div>
 
-
-            </div>
-            <div class="row">
-                <div class="col-xs-4 text-left" style="margin-top: 20px;">
-                    <input type="button" onclick="editemailSave()" class="btn-addcart" value="SAVE" id="addcart">
-                </div>
-                <div class="col-xs-4 text-center" style="margin-top: 20px;">
-                    <a href="/home/orderedrecedit/{{$template->id}}"><button type="button" class="btn-addcart">Go Delivery</button></a>
-                </div>
-                <div class="col-xs-4 text-right" style="margin-top: 20px;">
-                    <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
+                <div class="row">
+                    <div class="col-xs-4 text-left" style="margin-top: 20px;">
+                        <input type="button" onclick="editemailSave()" class="btn-addcart" value="SAVE" id="addcart">
+                    </div>
+                    <div class="col-xs-4 text-center" style="margin-top: 20px;">
+                        <a href="/home/orderedrecedit/{{$template->id}}">
+                            <button type="button" class="btn-addcart">Go Delivery</button>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 text-right" style="margin-top: 20px;">
+                        <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,6 +229,7 @@
             $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
             $('#textcontent').submit();
         }
+
         function addNewPage() {
             $('#editorcontent').append('<textarea class="form-control" id="txtEditor1"></textarea>');
             $("#txtEditor1").Editor();
