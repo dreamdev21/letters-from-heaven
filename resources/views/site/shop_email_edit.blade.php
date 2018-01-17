@@ -31,6 +31,8 @@
     <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -135,18 +137,19 @@ if($item->id == $template->id){
     $(document).ready(function () {
         $("#txtEditor").Editor();
         $("#txtEditor").Editor("setText", '{!! $item->pro_text !!}');
-        $('.Editor-editor').css('overflow-y', 'hidden');
+        // $('.Editor-editor').css('overflow-y', 'hidden');
     });
 </script>
 
 <div class="container-fluid" style="margin-top: 10rem;">
     {{ Form::open(['method' => 'get','route' => ['/shop/email/saveemail'],'style'=>'display:inline','class'=>'form-horizontal','id'=>'textcontent']) }}
     {{ csrf_field() }}
+    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
     <div class="container">
         <div class="row text-center" style="margin: 0;">
             <div class="col-lg-12 nopadding" style="text-align: -webkit-center;font-size: 18px;margin-top: 10px;">
                 <div class="row" id="editorcontent" style="margin: 0;text-align: -webkit-center">
-                    <textarea class="form-control paginate" id="txtEditor"></textarea>
+                    <textarea class="form-control paginate" id="txtEditor" style="resize: none;"></textarea><label>PAGE : 1</label>
                 </div>
                 <div class="row"  style="width:{{ $width }}px;margin: 0">
                     <div class="col-xs-4 text-left" style="margin-top: 20px;margin-left:-15px;">
@@ -207,101 +210,115 @@ if($item->id == $template->id){
             </div>
 
         </div>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            draftever10sec();
-        });
+        <script type="text/javascript">
+            var editor_count = 1;
+            $("#editorcontent").on('keydown', function() {
+                var currentHeight = ($(".Editor-editor")[editor_count-1].scrollHeight);
+                var editorheight = {{ $height }};
+                console.log(currentHeight);
+                console.log(editorheight);
+                if(currentHeight >  editorheight ){
+                    $.confirm({
+                        icon: 'fa fa-plus-circle fa-plus-circle',
+                        title: 'Confirm',
+                        content: 'I need more page.',
+                        draggable: true,
+                        dragWindowBorder: false,
+                        animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                        animationSpeed: 500, // 2 seconds
+                        theme: 'material',
+                        buttons: {
+                            YES: function () {
+                                addNewPage();
+                            },
+                            NO: function () {
 
-        function draftever10sec() {
-            $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
-            var text = $('.Editor-editor').html();
-            // $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
+                            }
 
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                type: 'GET',
-                url: '/shop/email/updatetext',
-                data: {textcontent: text, draft: 0, id:{{ $item->id }} },
-                success: function (response) {
-                    console.log(response);
-                    setTimeout(function () {
-                        draftever10sec();
-                    }, 5000);
-
+                        }
+                    });
                 }
             });
-        }
 
-        $('#savedraft').on('click', function () {
-            draft();
-        });
-
-        function draft() {
-            $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
-            var text = $('.Editor-editor').html();
-            console.log(text);
-            // $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
-
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                type: 'GET',
-                url: '/shop/email/saveemail',
-                data: {textcontent: text, draft: 0, id:{{ $item->id }}},
-                success: function (response) {
-                    console.log(response);
-                    window.location.href = response;
-                }
+            $(function () {
+                draftever10sec();
             });
-        }
 
-        function gotoDelivery() {
-            $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
-            var text = $('.Editor-editor').html();
-            $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                type: 'GET',
-                url: '/shop/email/saveemail',
-                data: {textcontent: text, draft: 1, id:{{ $item->id }}},
-                success: function (response) {
-                    console.log(response);
-                    window.location.href = response;
-                }
-            });
-        }
+            function draftever10sec() {
+                $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
+                var text = $('.Editor-editor').html();
+                // $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
 
-        function addNewPage() {
-            $('#editorcontent').append('<textarea class="form-control" id="txtEditor1"></textarea>');
-            $("#txtEditor1").Editor();
-            $('.Editor-editor').css('overflow-y', 'hidden');
-        }
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'GET',
+                    url: '/shop/email/updatetext',
+                    data: {textcontent: text, draft: 0, id:{{ $item->id }} },
+                    success: function (response) {
+                        console.log(response);
+                        setTimeout(function () {
+                            draftever10sec();
+                        }, 5000);
 
-        $('#textcontent').on('keydown', function (event) {
-
-            // scrollbars apreared
-            if (this.clientHeight < this.scrollHeight) {
-                alert();
-                var words = $(this).val().split(' ');
-                var last_word = words.pop();
-                var reduced = words.join(' ');
-                $(this).val(reduced);
-                // $(this).css('height', '65px');
-
-                $('#editorcontent').append('<textarea class="form-control" id="txtEditor1"></textarea>');
-                $("#txtEditor1").Editor();
-                $(this).next().focus().val(last_word);
-
+                    }
+                });
             }
 
-        });
-    </script>
+            $('#savedraft').on('click', function () {
+                draft();
+            });
+
+            function draft() {
+                $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
+                var text = $('.Editor-editor').html();
+                console.log(text);
+                // $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
+
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'GET',
+                    url: '/shop/email/saveemail',
+                    data: {textcontent: text, draft: 0, id:{{ $item->id }}},
+                    success: function (response) {
+                        console.log(response);
+                        window.location.href = response;
+                    }
+                });
+            }
+
+            function gotoDelivery() {
+                $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
+                var text = $('.Editor-editor').html();
+                $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'GET',
+                    url: '/shop/email/saveemail',
+                    data: {textcontent: text, draft: 1, id:{{ $item->id }}},
+                    success: function (response) {
+                        console.log(response);
+                        window.location.href = response;
+                    }
+                });
+            }
+
+            function addNewPage() {
+                editor_count++;
+                var newEditor = 'txtEditor' + editor_count;
+                var newEditorId = '#txtEditor' + editor_count;
+                $('#editorcontent').append('<textarea class="form-control" id="'+newEditor+'"></textarea><label>PAGE : '+editor_count+'</label>');
+                $(newEditorId).Editor();
+                $('.Editor-editor').css('overflow-y', 'hidden');
+            }
+
+        </script>
+    </div>
     <?php
     }
     }
