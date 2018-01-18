@@ -152,15 +152,18 @@ if($item->id == $template->id){
                     <textarea class="form-control paginate" id="txtEditor" style="resize: none;"></textarea><label>PAGE : 1</label>
                 </div>
                 <div class="row"  style="width:{{ $width }}px;margin: 0">
-                    <div class="col-xs-4 text-left" style="margin-top: 20px;margin-left:-15px;">
+                    <div class="col-xs-3 text-left" style="margin-top: 20px;margin-left:-15px;">
                         <input type="button" onclick="draft()" class="btn-addcart" value="SAVE AS DRAFT"
                                id="savedraft">
                     </div>
-                    <div class="col-xs-4 text-center" style="margin-top: 20px;">
+                    <div class="col-xs-3 text-center" style="margin-top: 20px;">
                         <input type="button" onclick="gotoDelivery()" class="btn-addcart" value="GO TO DELIVERY"
                                id="addcart">
                     </div>
-                    <div class="col-xs-4 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
+                    <div class="col-xs-3 text-right" style="margin-top: 20px;" id = "removebtn">
+                        <input type="button" onclick="removePage()" class="btn-addcart" value="REMOVE PAGE">
+                    </div>
+                    <div class="col-xs-3 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
                         <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
                     </div>
                 </div>
@@ -221,6 +224,7 @@ if($item->id == $template->id){
                     $.confirm({
                         icon: 'fa fa-plus-circle fa-plus-circle',
                         title: 'Confirm',
+                        type:'green',
                         content: 'I need more page.',
                         draggable: true,
                         dragWindowBorder: false,
@@ -234,7 +238,6 @@ if($item->id == $template->id){
                             NO: function () {
 
                             }
-
                         }
                     });
                 }
@@ -247,8 +250,27 @@ if($item->id == $template->id){
             function draftever10sec() {
                 $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
                 var text = $('.Editor-editor').html();
-                // $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
-
+                // if(text == "<div><br></div>" && editor_count != 1){
+                //     $.confirm({
+                //         icon: 'fa fa-minus-circle fa-minus-circle',
+                //         title: 'Are you sure reduce blank pages?',
+                //         type:'green',
+                //         content: 'It seems you have one more blank page. You can reduce pages directly or manually click REMOVE PAGE button.',
+                //         draggable: true,
+                //         dragWindowBorder: false,
+                //         animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                //         animationSpeed: 500, // 2 seconds
+                //         theme: 'material',
+                //         buttons: {
+                //             YES: function () {
+                //                 removeAllPage();
+                //             },
+                //             NO: function () {
+                //
+                //             }
+                //         }
+                //     });
+                // }
                 $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -274,8 +296,6 @@ if($item->id == $template->id){
                 $('#textcontent').append('<input type = "hidden" name = "draft" value = "0">');
                 var text = $('.Editor-editor').html();
                 console.log(text);
-                // $('#textcontent').append('<input type = "hidden" name = "textcontent" value = "' + text + '">');
-
                 $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -309,12 +329,51 @@ if($item->id == $template->id){
             }
 
             function addNewPage() {
-                editor_count++;
-                var newEditor = 'txtEditor' + editor_count;
-                var newEditorId = '#txtEditor' + editor_count;
-                $('#editorcontent').append('<textarea class="form-control" id="'+newEditor+'"></textarea><label>PAGE : '+editor_count+'</label>');
-                $(newEditorId).Editor();
-                $('.Editor-editor').css('overflow-y', 'hidden');
+                if(editor_count <  5){
+                    editor_count++;
+                    var newEditor = 'txtEditor' + editor_count;
+                    var newEditorId = '#txtEditor' + editor_count;
+                    $('#editorcontent').append('<textarea class="form-control" id="'+newEditor+'"></textarea><label id = "label'+newEditor+'">PAGE : '+editor_count+'</label>');
+                    $(newEditorId).Editor();
+                    $('.Editor-editor').css('overflow-y', 'hidden');
+                }else{
+                    $.alert({
+                        title: 'Sorry!',
+                        type: 'blue',
+                        draggable: true,
+                        dragWindowBorder: false,
+                        animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                        animationSpeed: 500, // 2 seconds
+                        theme: 'material',
+                        content: 'We limit letter pages at 5.',
+                });
+                }
+
+                // if(editor_count > 1){
+                //     $('#removebtn').css('display','show');
+                // }
+            }
+            function removePage(){
+                if(editor_count != 1){
+                    $('#editor' + editor_count).remove();
+                    $('#txtEditor' + editor_count).remove();
+                    $('#labeltxtEditor' + editor_count).remove();
+                    editor_count--;
+                    // if(editor_count == 1){
+                    //     $('#removebtn').css('display','none');
+                    // }
+                }else{
+                    $.alert({
+                        title: 'Warning!',
+                        type: 'blue',
+                        draggable: true,
+                        dragWindowBorder: false,
+                        animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                        animationSpeed: 500, // 2 seconds
+                        theme: 'material',
+                        content: 'You should have at least 1 page!',
+                    });
+                }
             }
 
         </script>

@@ -4008,8 +4008,8 @@ You should have received a copy of the GNU General Public License along with thi
             // 						contenteditable:"true",
             // 						// background-image : imageurl
             // 		 	}).appendTo(containerDiv);
-
-            var editor = $('<div class="Editor-editor" contenteditable="true" style="text-align: left;background-image: url(' + imageurl + ');  padding-top:96px; padding-left:120px; padding-right:120px; padding-bottom:96px;height:' + editorheight + 'px;"></div>').appendTo(containerDiv);
+            console.log(editor_count);
+            var editor = $('<div id = "editor'+editor_count+'" class="Editor-editor" contenteditable="true" style="text-align: left;background-image: url(' + imageurl + ');  padding-top:96px; padding-left:120px; padding-right:120px; padding-bottom:96px;height:' + editorheight + 'px;"></div>').appendTo(containerDiv);
             var statusBar = $("<div/>", {
                 id: "statusbar",
                 class: "row-fluid",
