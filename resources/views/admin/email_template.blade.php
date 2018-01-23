@@ -234,13 +234,25 @@
                                                                                               value="{{$template->name}}"
                                                                                               class="form-control">
                                         </div>
-                                        <div class="form-group"><label>Price : $</label> <input type="number"
+                                        <div class="form-group"><label>Price : $</label> <input type="text"
                                                                                                 name="price" required
                                                                                                 autofocus
                                                                                                 value="{{$template->price}}"
                                                                                                 class="form-control">
                                         </div>
+                                        <div class="form-group">
+                                            <label>Status : </label>
 
+                                            <div class="col-md-12" style="padding: 0">
+                                                <select class="form-control m-b" name="state">
+
+                                                    <option value="0">Publish</option>
+                                                    <option value="1">Draft</option>
+                                                    <option value="2">Deleted</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div>
 
 
@@ -288,7 +300,7 @@
                                             <label for="price" class="col-md-4 control-label">Price : </label>
 
                                             <div class="col-md-6">
-                                                <input id="price" type="number" class="form-control" name="price"
+                                                <input id="price" type="text" class="form-control" name="price"
                                                        value="" required autofocus>
 
 
@@ -304,7 +316,20 @@
 
                                             </div>
                                         </div>
-                                        <input type="hidden" name="state" value="0">
+                                        <div class="form-group">
+                                            <label for="file" class="col-md-4 control-label">Status : </label>
+
+                                            <div class="col-md-6">
+                                                <select class="form-control m-b" name="state">
+
+                                                    <option value="0">Publish</option>
+                                                    <option value="1">Draft</option>
+                                                    <option value="2">Deleted</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        {{--<input type="hidden" name="state" value="0">--}}
                                         <div class="form-group">
                                             <div class="row text-center">
                                                 <button type="submit" class="btn btn-primary">

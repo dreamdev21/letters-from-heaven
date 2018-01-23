@@ -18,7 +18,7 @@ class ShopEmailController extends Controller
 {
     public function index()
     {
-        $templates = EmailTemplate::all();
+        $templates = EmailTemplate::select('*')->where('email_templates.state','0')->get();
         return view('site.shop_email')->with('templates',$templates);
     }
 

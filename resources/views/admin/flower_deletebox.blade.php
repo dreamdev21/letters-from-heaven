@@ -231,7 +231,7 @@
                                                                                           value="{{$template->name}}"
                                                                                           class="form-control">
                                     </div>
-                                    <div class="form-group"><label>Price : $</label> <input type="number"
+                                    <div class="form-group"><label>Price : $</label> <input type="text"
                                                                                             name="price" required
                                                                                             autofocus
                                                                                             value="{{$template->price}}"
@@ -319,7 +319,7 @@
                                     <label for="price" class="col-md-4 control-label">Price : </label>
 
                                     <div class="col-md-6">
-                                        <input id="price" type="number" class="form-control" name="price"
+                                        <input id="price" type="text" class="form-control" name="price"
                                                value="" required autofocus>
 
 
