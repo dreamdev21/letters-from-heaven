@@ -4033,7 +4033,7 @@ You should have received a copy of the GNU General Public License along with thi
                             animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
                             animationSpeed: 500, // 2 seconds
                             theme: 'material',
-                            content: 'We limit letter characters at 1500.',
+                            content: 'We limit letter characters at 1000.',
                         });
                         return;
                     }else{
