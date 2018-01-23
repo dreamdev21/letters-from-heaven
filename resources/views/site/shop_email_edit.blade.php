@@ -149,22 +149,24 @@ if($item->id == $template->id){
         <div class="row text-center" style="margin: 0;">
             <div class="col-lg-12 nopadding" style="text-align: -webkit-center;font-size: 18px;margin-top: 10px;">
                 <div class="row" id="editorcontent" style="margin: 0;text-align: -webkit-center">
-                    <textarea class="form-control paginate" id="txtEditor" style="resize: none;"></textarea><label>PAGE : 1</label>
+                    <textarea class="form-control paginate" id="txtEditor" style="resize: none;"></textarea>
+                    {{--<label>PAGE : 1</label>--}}
                 </div>
                 <div class="row"  style="width:{{ $width }}px;margin: 0">
-                    <div class="col-xs-3 text-left" style="margin-top: 20px;margin-left:-15px;">
+                    <div class="col-xs-6 text-left" style="margin-top: 20px;margin-left:-15px;">
                         <input type="button" onclick="draft()" class="btn-addcart" value="SAVE AS DRAFT"
                                id="savedraft">
                     </div>
-                    <div class="col-xs-3 text-center" style="margin-top: 20px;">
+                    {{--<div class="col-xs-3 text-right" style="margin-top: 20px;">--}}
+                        {{--<input type="button" onclick="gotoDelivery()" class="btn-addcart" value="GO TO DELIVERY"--}}
+                               {{--id="addcart">--}}
+                    {{--</div>--}}
+                    {{--<div class="col-xs-3 text-right" style="margin-top: 20px;" id = "removebtn">--}}
+                        {{--<input type="button" onclick="removePage()" class="btn-addcart" value="REMOVE PAGE">--}}
+                    {{--</div>--}}
+                    <div class="col-xs-6 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
                         <input type="button" onclick="gotoDelivery()" class="btn-addcart" value="GO TO DELIVERY"
                                id="addcart">
-                    </div>
-                    <div class="col-xs-3 text-right" style="margin-top: 20px;" id = "removebtn">
-                        <input type="button" onclick="removePage()" class="btn-addcart" value="REMOVE PAGE">
-                    </div>
-                    <div class="col-xs-3 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
-                        <input type="button" onclick="addNewPage()" class="btn-addcart" value="ADD NEW PAGE">
                     </div>
                 </div>
             </div>

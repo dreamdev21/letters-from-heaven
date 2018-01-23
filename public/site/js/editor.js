@@ -4020,11 +4020,26 @@ You should have received a copy of the GNU General Public License along with thi
             $(this).data("statusBar", statusBar);
             var editor_Content = this;
             if (settings['status_bar']) {
-                editor.keyup(function (event) {
+                editor.keydown(function (event) {
                     var wordCount = methods.getWordCount.apply(editor_Content);
                     var charCount = methods.getCharCount.apply(editor_Content);
-                    // $(editor_Content).data("statusBar").html('<div class="label">' + 'Words : ' + wordCount + '</div>');
-                    // $(editor_Content).data("statusBar").append('<div class="label">' + 'Characters : ' + charCount + '</div>');
+
+                    if (charCount > 1000){
+                        $.alert({
+                            title: 'Sorry!',
+                            type: 'blue',
+                            draggable: true,
+                            dragWindowBorder: false,
+                            animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                            animationSpeed: 500, // 2 seconds
+                            theme: 'material',
+                            content: 'We limit letter characters at 1500.',
+                        });
+                        return;
+                    }else{
+                        $(editor_Content).data("statusBar").html('<div class="label">' + 'Words : ' + wordCount + '</div>');
+                        $(editor_Content).data("statusBar").append('<div class="label">' + 'Characters : ' + charCount + '</div>');
+                    }
                 });
             }
 
