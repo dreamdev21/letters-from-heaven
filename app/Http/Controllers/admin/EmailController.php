@@ -75,19 +75,24 @@ class EmailController extends Controller
 
     public function save(Request $request)
     {
+
         $email = new EmailTemplate($request->all()) ;
 
         if($file = $request->hasFile('image')) {
-
             $file = $request->file('image') ;
-
             $fileName = time().'-'.$file->getClientOriginalName();
             $destinationPath = public_path().'/images' ;
             $file->move($destinationPath,$fileName);
             $email->image = $fileName;
         }
         $email->save() ;
-        return redirect('admin/email/template');
+        if($email['state'] == 0){
+            return redirect('admin/email/template');
+        }elseif ($email['state'] == 1){
+            return redirect('admin/email/draft');
+        }elseif ($email['state'] == 1){
+            return redirect('admin/email/deletebox');
+        }
     }
 
 }

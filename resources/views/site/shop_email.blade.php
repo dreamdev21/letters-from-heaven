@@ -90,19 +90,19 @@
                                 <form action="{{ route('shop/email/edit',$template->id) }}" method="POST" class="side-by-side">
                                     {!! csrf_field() !!}
                                     <div class="modal-content animated flipInY">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Email Template Detail</h4>
-                                        </div>
+                                        {{--<div class="modal-header">--}}
+                                            {{--<h4 class="modal-title">Email Template Detail</h4>--}}
+                                        {{--</div>--}}
                                         <div class="row">
 
                                             <div class="modal-body">
                                                 <div class="col-md-12">
 
                                                     <div id="">
-                                                        <input type="hidden" name="id" value="{{ $template->id }}">
-                                                        <h4>Name : {{$template->name}}</h4>
-                                                        <h4>Price : $ <span style="color: red;">{{ $template->price }}</span>
-                                                        </h4>
+                                                        {{--<input type="hidden" name="id" value="{{ $template->id }}">--}}
+                                                        {{--<h4>Name : {{$template->name}}</h4>--}}
+                                                        {{--<h4>Price : $ <span style="color: red;">{{ $template->price }}</span>--}}
+                                                        {{--</h4>--}}
                                                         <div id="emailtemplateimage" class="row">
 
                                                             <img class="shop-email-select"
@@ -118,7 +118,7 @@
                                         </div>
                                         <div class="modal-footer">
 
-                                            <input type="submit" class="btn btn-success btn-lg" value="Add to Cart">
+                                            <input type="submit" class="btn btn-success btn-lg" value="Select">
                                             {{--<a href="#"> <button type="button" class="btn btn-primary" style="margin-left: 0">Next</button></a>--}}
                                         </div>
 
