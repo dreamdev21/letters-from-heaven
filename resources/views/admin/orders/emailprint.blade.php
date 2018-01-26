@@ -9,8 +9,11 @@
     </title>
 </head>
 <body>
-
-<div class="row" style="background-image: url('/images/{{$order->pro_image}}');width: 100%;height: 100%;padding:20px;    background-repeat: no-repeat;" id = "emailcontent">
+<?php
+list($width, $height, $type, $attr) = getimagesize("images/" . $order->pro_image);
+?>
+{{--<div style="background-image: url('/images/{{$order->pro_image}}');width: 100%;height: 100%;padding:20px;    background-repeat: no-repeat;">--}}
+<div class="Editor-editor" contenteditable="true" style="text-align: left;background-image: url('/images/{{$order->pro_image}}'); background-repeat: no-repeat; padding-top:96px; padding-left:120px; padding-right:120px; padding-bottom:96px;height:{{ $height }}">
 {!! $order->pro_text !!}
 </div>
 </body>

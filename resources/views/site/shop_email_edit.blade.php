@@ -175,7 +175,7 @@ if($item->id == $template->id){
     {{ Form::close() }}
 </div>
 
-<footer>
+<footer style="margin-top: 60px;">
     <div class="container">
 
         <div class="row text-center" style="margin-top: 3rem;">
@@ -218,31 +218,31 @@ if($item->id == $template->id){
         <script type="text/javascript">
             var editor_count = 1;
             $("#editorcontent").on('keydown', function() {
-                var currentHeight = ($(".Editor-editor")[editor_count-1].scrollHeight);
-                var editorheight = {{ $height }};
-                console.log(currentHeight);
-                console.log(editorheight);
-                if(currentHeight >  editorheight ){
-                    $.confirm({
-                        icon: 'fa fa-plus-circle fa-plus-circle',
-                        title: 'Confirm',
-                        type:'green',
-                        content: 'I need more page.',
-                        draggable: true,
-                        dragWindowBorder: false,
-                        animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
-                        animationSpeed: 500, // 2 seconds
-                        theme: 'material',
-                        buttons: {
-                            YES: function () {
-                                addNewPage();
-                            },
-                            NO: function () {
-
-                            }
-                        }
-                    });
-                }
+                {{--var currentHeight = ($(".Editor-editor")[editor_count-1].scrollHeight);--}}
+                {{--var editorheight = {{ $height }};--}}
+                {{--console.log(currentHeight);--}}
+                {{--console.log(editorheight);--}}
+                // if(currentHeight >  editorheight ){
+                    // $.confirm({
+                    //     icon: 'fa fa-plus-circle fa-plus-circle',
+                    //     title: 'Confirm',
+                    //     type:'green',
+                    //     content: 'I need more page.',
+                    //     draggable: true,
+                    //     dragWindowBorder: false,
+                    //     animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                    //     animationSpeed: 500, // 2 seconds
+                    //     theme: 'material',
+                    //     buttons: {
+                    //         YES: function () {
+                    //             addNewPage();
+                    //         },
+                    //         NO: function () {
+                    //
+                    //         }
+                    //     }
+                    // });
+                // }
             });
 
             $(function () {

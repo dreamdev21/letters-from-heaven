@@ -3546,7 +3546,8 @@ You should have received a copy of the GNU General Public License along with thi
                     "icon": "fa fa-undo",
                     "tooltip": "Undo",
                     "commandname": "undo",
-                    "custom": null
+                    "custom": null,
+                    "id": "undoIcon"
                 },
 
                 'redo': {
@@ -4019,11 +4020,27 @@ You should have received a copy of the GNU General Public License along with thi
             $(this).data("editor", editor);
             $(this).data("statusBar", statusBar);
             var editor_Content = this;
+
             if (settings['status_bar']) {
                 editor.keydown(function (event) {
                     var wordCount = methods.getWordCount.apply(editor_Content);
                     var charCount = methods.getCharCount.apply(editor_Content);
+                    var currentHeight = ($(".Editor-editor")[editor_count-1].scrollHeight);
+                    console.log(currentHeight);
+                    console.log(editorheight);
+                    if(currentHeight >  editorheight ){
+                        $.alert({
+                            title: 'Sorry!',
+                            type: 'blue',
+                            draggable: true,
+                            dragWindowBorder: false,
+                            animationBounce: 2.5, // default is 1.2 whereas 1 is no bounce.
+                            animationSpeed: 500, // 2 seconds
+                            theme: 'material',
+                            content: 'You have to write letter on letter pad.',
+                        });
 
+                    }
                     if (charCount > 1000){
                         $.alert({
                             title: 'Sorry!',
@@ -4042,7 +4059,6 @@ You should have received a copy of the GNU General Public License along with thi
                     }
                 });
             }
-
 
             for (var item in menuItems) {
                 if (!settings[item]) { //if the display is not set to true for the button in the settings.
@@ -4113,7 +4129,6 @@ You should have received a copy of the GNU General Public License along with thi
                     cMenu.appendTo('body');
                 }
                 else if ($(e.target).is('img')) {
-
                     methods.createImageContext.apply(this, [e, cMenuUl]);
                     cMenuUl.appendTo(cMenu);
                     cMenu.appendTo('body');
@@ -4132,7 +4147,6 @@ You should have received a copy of the GNU General Public License along with thi
                 }
             }(event)));
             cMenuli.appendTo(cMenuUl);
-
         },
 
         createImageContext: function (event, cMenuUl) {

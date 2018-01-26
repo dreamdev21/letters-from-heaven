@@ -91,5 +91,6 @@ class OrdersController extends Controller
         $order = Orders::findOrFail($id);
         $pdf = PDF::loadView('admin.orders.emailprint',array('order'=>$order));
         return $pdf->download(($order->id).'.pdf');
+//        return view('admin.orders.emailprint')->with('order',$order);
     }
 }

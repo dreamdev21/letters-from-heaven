@@ -231,26 +231,27 @@
                                                     <label>Item : </label><span style="color: #00b0ff">{{$item->pro_name}}</span>
                                                     <br>
                                                     <button class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $item->id }}">Write Review</button>
-
-                                                <?php
-                                                    $result_date = DateTime::createFromFormat('m-d-Y', $item->deliverydate);
-                                                    $deliverytime = strtotime($result_date->format('Y-m-d'));
-                                                    $limit = time()+3600*24*30;
-                                                    if($item->orderstate == 1){
-                                                        if($item->deliverytype == "1" || $item->deliverytype == "2"){
-                                                            if(($deliverytime-$limit)< 0){
-                                                                echo ('<button class="btn btn-primary style="    margin-right: 4px;"" disabled="true">Edit</button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'" disabled="true">Edit Recipient'."'".'s Info</a></button>');
+                                                    @if($item->deliverydate)
+                                                    <?php
+                                                        $result_date = DateTime::createFromFormat('m-d-Y', $item->deliverydate);
+                                                        $deliverytime = strtotime($result_date->format('Y-m-d'));
+                                                        $limit = time()+3600*24*30;
+                                                        if($item->orderstate == 1){
+                                                            if($item->deliverytype == "1" || $item->deliverytype == "2"){
+                                                                if(($deliverytime-$limit)< 0){
+                                                                    echo ('<button class="btn btn-primary style="    margin-right: 4px;"" disabled="true">Edit</button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'" disabled="true">Edit Recipient'."'".'s Info</a></button>');
+                                                                }else{
+                                                                    echo ('<button class="btn btn-primary" style="    margin-right: 4px;"><a href="/home/orderededit/'.$item->id.'">Edit</a></button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'">Edit Recipient'."'".'s Info</a></button>');
+                                                                }
                                                             }else{
-                                                                echo ('<button class="btn btn-primary" style="    margin-right: 4px;"><a href="/home/orderededit/'.$item->id.'">Edit</a></button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'">Edit Recipient'."'".'s Info</a></button>');
+                                                                echo('<button class="btn btn-primary" style="    margin-right: 4px;"><a href="/home/orderededit/'.$item->id.'">Edit</a></button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'">Edit Recipient'."'".'s Info</a></button>');
                                                             }
                                                         }else{
                                                             echo('<button class="btn btn-primary" style="    margin-right: 4px;"><a href="/home/orderededit/'.$item->id.'">Edit</a></button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'">Edit Recipient'."'".'s Info</a></button>');
                                                         }
-                                                    }else{
-                                                        echo('<button class="btn btn-primary" style="    margin-right: 4px;"><a href="/home/orderededit/'.$item->id.'">Edit</a></button><button class="btn btn-primary"><a href="/home/orderedrecedit/'.$item->id.'">Edit Recipient'."'".'s Info</a></button>');
-                                                    }
 
-                                                ?>
+                                                    ?>
+                                                    @endif
                                                 </div>
 
                                                 <div class="row form-group">
@@ -260,10 +261,12 @@
                                                     <label>Recepients Name : </label><span style="color: #00b0ff">{{$item->firstname}}  {{$item->lastname}}</span>
                                                     <br>
                                                 </div>
+                                                @if($item->deliverydate)
                                                 <div class="row">
                                                     <label>Scheduled Date : </label><span style="color: #00b0ff"><?php $result_date = DateTime::createFromFormat('m-d-Y', $item->deliverydate); echo $result_date->format('Y-m-d'); ?></span>
                                                     <br>
                                                 </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </td>
