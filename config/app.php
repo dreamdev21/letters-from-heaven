@@ -191,9 +191,7 @@ return [
         Anouar\Paypalpayment\PaypalpaymentServiceProvider::class,
         'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider',
         Laravel\Socialite\SocialiteServiceProvider::class,
-
-
-
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -256,7 +254,7 @@ return [
         'Paypalpayment'   => Anouar\Paypalpayment\Facades\PaypalPayment::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 
 ];

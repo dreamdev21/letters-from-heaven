@@ -2144,3 +2144,27 @@
 
 ================================================================================================================================
 
+[29-01-2018 13:58:46] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[29-01-2018 13:58:47] PayPal\Core\PayPalHttpConnection : INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[29-01-2018 13:58:48] PayPal\Core\PayPalHttpConnection : DEBUG: Request Headers 	: POST /v1/oauth2/token HTTP/1.1, Host: api.sandbox.paypal.com, User-Agent: PayPalSDK/PayPalPHPSDK 1.12.0 (platform-ver=7.1.9; bit=64; os=Windows_NT_10.0; machine=AMD64; crypto-lib-ver=1.0.2k; curl=7.55.0), Authorization: Basic QVZHcE15djh3b2VQTUVPVE9LLTlpRlBHd0l4N2htZVpkUV9TWlh5ZmhVUUZZRG13WDJabGhhY0Y5d0s2aUtHUnNlN2tmT09fUjBYWlhOUW86RUVESEtvSWF5b0hQUElya2xidTRkM1M5ZVljdFNhQ1Uwak5UbDdfZ2ZPX1JYM2JTM3FubWVTTy1FRzBPQ3VUejRWNnpvbEo3b0hVSi02emg=, Accept: */*, Content-Length: 29, Content-Type: application/x-www-form-urlencoded, , 
+[29-01-2018 13:58:48] PayPal\Core\PayPalHttpConnection : DEBUG: Request Data		: grant_type=client_credentials
+--------------------------------------------------------------------------------------------------------------------------------
+
+[29-01-2018 13:58:48] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[29-01-2018 13:58:48] PayPal\Core\PayPalHttpConnection : DEBUG: Response Headers	: Date: Mon, 29 Jan 2018 13:58:49 GMT, Server: Apache, paypal-debug-id: 734ae0c768736, X-PAYPAL-TOKEN-SERVICE: IAAS, HTTP_X_PP_AZ_LOCATOR: sandbox.slc, Paypal-Debug-Id: 734ae0c768736, Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT, Vary: Authorization, Content-Length: 550, Connection: close, Content-Type: application/json, 
+[29-01-2018 13:58:48] PayPal\Core\PayPalHttpConnection : DEBUG: Response Data 	: {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","nonce":"2018-01-29T13:58:49ZsE_qI_edHAOvobhx6zmZ8ZLGwpZjBl8A3EF6HKZhb8s","access_token":"A21AAHjnOgvq5_1rhTs56IsiSlBxpu2Dj3xAdreVY-KgBsQtSNBizYNTkThdlZNpDXafhT4HcvYR3EzRjHSOQm7qcSmaolF8g","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":32400}
+
+================================================================================================================================
+
+[29-01-2018 13:58:48] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[29-01-2018 13:58:49] PayPal\Core\PayPalHttpConnection : INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[29-01-2018 13:58:50] PayPal\Core\PayPalHttpConnection : DEBUG: Request Headers 	: POST /v1/payments/payment HTTP/1.1, Host: api.sandbox.paypal.com, Accept: */*, Content-Type: application/json, User-Agent: PayPalSDK/PayPalPHPSDK 1.12.0 (platform-ver=7.1.9; bit=64; os=Windows_NT_10.0; machine=AMD64; crypto-lib-ver=1.0.2k; curl=7.55.0), Authorization: Bearer A21AAHjnOgvq5_1rhTs56IsiSlBxpu2Dj3xAdreVY-KgBsQtSNBizYNTkThdlZNpDXafhT4HcvYR3EzRjHSOQm7qcSmaolF8g, Content-Length: 445, , 
+[29-01-2018 13:58:50] PayPal\Core\PayPalHttpConnection : DEBUG: Request Data		: {"intent":"order","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:8000/paypal/success","cancel_url":"http://localhost:8000/paypal/cancel"},"transactions":[{"amount":{"currency":"USD","total":"2256","details":{"shipping":"0","tax":"0","subtotal":"2256"}},"item_list":{"items":[{"name":"sdsd","currency":"USD","quantity":4,"price":"564"}]},"description":"Payment description","invoice_number":"5a6f2896a2718"}]}
+--------------------------------------------------------------------------------------------------------------------------------
+
+[29-01-2018 13:58:50] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[29-01-2018 13:58:50] PayPal\Core\PayPalHttpConnection : DEBUG: Response Headers	: Date: Mon, 29 Jan 2018 13:58:51 GMT, Server: Apache, paypal-debug-id: 2ce81f1f2e107, Content-Language: *, HTTP_X_PP_AZ_LOCATOR: sandbox.slc, Paypal-Debug-Id: 2ce81f1f2e107, Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT, Vary: Authorization, Content-Length: 860, Connection: close, Content-Type: application/json, 
+[29-01-2018 13:58:50] PayPal\Core\PayPalHttpConnection : DEBUG: Response Data 	: {"id":"PAY-4YS44162JL308552TLJXSRGY","intent":"order","state":"created","payer":{"payment_method":"paypal"},"transactions":[{"amount":{"total":"2256.00","currency":"USD","details":{"subtotal":"2256.00","tax":"0.00","shipping":"0.00"}},"description":"Payment description","invoice_number":"5a6f2896a2718","item_list":{"items":[{"name":"sdsd","price":"564.00","currency":"USD","quantity":4}]},"related_resources":[]}],"create_time":"2018-01-29T13:58:51Z","links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4YS44162JL308552TLJXSRGY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-55F31005RU8311705","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4YS44162JL308552TLJXSRGY/execute","rel":"execute","method":"POST"}]}
+
+================================================================================================================================
+

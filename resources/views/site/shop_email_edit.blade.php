@@ -120,11 +120,11 @@ $items = Cart::getContent();
 foreach($items as $item)
 
 {
-list($width, $height, $type, $attr) = getimagesize("images/" . $item->attributes->image);
+list($width, $height, $type, $attr) = getimagesize("images/tumbnail/724x980/" . $item->attributes->image);
 if($item->id == $template->id){
 ?>
 <script type="text/javascript">
-    var imageurl = '/images/{{ $item->attributes->image }}';
+    var imageurl = '/images/tumbnail/724x980/{{ $item->attributes->image }}';
     var templateId = '{{ $item->id }}';
 </script>
 <script>
@@ -153,7 +153,7 @@ if($item->id == $template->id){
                     {{--<label>PAGE : 1</label>--}}
                 </div>
                 <div class="row"  style="width:{{ $width }}px;margin: 0">
-                    <div class="col-xs-6 text-left" style="margin-top: 20px;margin-left:-15px;">
+                    <div class="col-xs-6 text-left" style="margin-left:-15px;">
                         <input type="button" onclick="draft()" class="btn-addcart" value="SAVE AS DRAFT"
                                id="savedraft">
                     </div>
@@ -164,7 +164,7 @@ if($item->id == $template->id){
                     {{--<div class="col-xs-3 text-right" style="margin-top: 20px;" id = "removebtn">--}}
                         {{--<input type="button" onclick="removePage()" class="btn-addcart" value="REMOVE PAGE">--}}
                     {{--</div>--}}
-                    <div class="col-xs-6 text-right" style="margin-top: 20px;margin-left: 15px;padding-right: 0px;">
+                    <div class="col-xs-6 text-right" style="margin-left: 15px;padding-right: 0px;">
                         <input type="button" onclick="gotoDelivery()" class="btn-addcart" value="GO TO DELIVERY"
                                id="addcart">
                     </div>
@@ -175,7 +175,7 @@ if($item->id == $template->id){
     {{ Form::close() }}
 </div>
 
-<footer style="margin-top: 60px;">
+<footer style="margin-top: 30px;">
     <div class="container">
 
         <div class="row text-center" style="margin-top: 3rem;">

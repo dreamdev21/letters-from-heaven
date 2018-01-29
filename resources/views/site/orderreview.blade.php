@@ -46,7 +46,7 @@
                         <div class="col-sm-6">
                             <div class="form-group text-left"><h5>Product Info</h5></div>
                             <div class="form-group"><img style="width: 10rem;"
-                                        src="{{ asset('images/') }}/{{$item->image}}">
+                                        src="{{ asset('images/tumbnail/100x150/') }}/{{$item->image}}">
                             </div>
                             <div class="form-group"><label>Name
                                     : </label> {{$item->name}}</div>

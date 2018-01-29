@@ -33,11 +33,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        var imageurl = '/images/{{ $template->pro_image }}';
+        var imageurl = '/images/tumbnail/724x980/{{ $template->pro_image }}';
         var templateId = '{{ $template->id }}';
     </script>
     <?php
-    list($width, $height, $type, $attr) = getimagesize("images/" . $template->pro_image);
+    list($width, $height, $type, $attr) = getimagesize("images/tumbnail/724x980/" . $template->pro_image);
     ?>
     <script>
 

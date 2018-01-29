@@ -44,7 +44,7 @@
                                 @if($item->attributes->pro_type == 1)
                                 <a href="{{ url('shop/flower/') }}/{{ $item->id }}"><img src="/images/{{ $item->attributes->image }}"></a>
                                 @else
-                                <a href="{{ url('shop/email/') }}/{{ $item->id }}"><img src="/images/{{ $item->attributes->image }}"></a>
+                                <a href="{{ url('shop/email/') }}/{{ $item->id }}"><img src="/images/tumbnail/300x400/{{ $item->attributes->image }}"></a>
                                 @endif
                             </td>
 
@@ -86,7 +86,7 @@
                                     @if($item->attributes->pro_type == 1)
                                         <a href="{{ url('shop/flower/') }}/{{ $item->id }}"><img src="/images/{{ $item->attributes->image }}"></a>
                                     @else
-                                        <a href="{{ url('shop/email/') }}/{{ $item->id }}"><img src="/images/{{ $item->attributes->image }}"></a>
+                                        <a href="{{ url('shop/email/') }}/{{ $item->id }}"><img src="/images/tumbnail/300x400/{{ $item->attributes->image }}"></a>
                                     @endif
                                 </td>
 

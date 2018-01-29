@@ -2,19 +2,6 @@
 
 @section('content')
     <link rel="stylesheet" href="/site/css/email_choose.css">
-    <style type="text/css">
-        footer {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: black;
-            color: #ffffff;
-            font-size: 2rem;
-            font-family:"Sitka Subheading";
-
-        }
-    </style>
     <section id="email_choose" class="sections" style="margin-top: 5rem;">
         <div class="container">
             {{--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 2rem;">--}}
@@ -77,7 +64,7 @@
                                 <div id="emailtemplateimage" class="row">
 
                                     <a href="#" data-toggle="modal" data-target="#myModal{{ $template->id }}"> <img class="imagecontainer"
-                                                                                                  src="/images/{{ $template->image }}" style="width: 10rem;height: 15rem;"></a>
+                                                                                                  src="/images/tumbnail/724x980/{{ $template->image }}" style="width: 10rem;height: 15rem;"></a>
                                 </div>
 
                             </div>
@@ -106,7 +93,7 @@
                                                         <div id="emailtemplateimage" class="row">
 
                                                             <img class="shop-email-select"
-                                                                 src="/images/{{ $template->image }}"
+                                                                 src="/images/tumbnail/300x400/{{ $template->image }}"
                                                                  >
                                                         </div>
 

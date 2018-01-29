@@ -17,7 +17,8 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
         "snowfire/beautymail": "dev-master",
-        "srmklive/paypal": "~1.0"
+        "srmklive/paypal": "~1.0",
+        "matriphe/imageupload": "6.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

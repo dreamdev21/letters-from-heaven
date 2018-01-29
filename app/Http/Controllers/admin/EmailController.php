@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
-
+use Image;
 
 class EmailController extends Controller
 {
@@ -84,6 +84,11 @@ class EmailController extends Controller
             $destinationPath = public_path().'/images' ;
             $file->move($destinationPath,$fileName);
             $email->image = $fileName;
+
+            Image::make($destinationPath.'/'.$fileName)->resize(300, 400)->save($destinationPath.'/tumbnail/300x400/'.$fileName);
+            Image::make($destinationPath.'/'.$fileName)->resize(724, 980)->save($destinationPath.'/tumbnail/724x980/'.$fileName);
+            Image::make($destinationPath.'/'.$fileName)->resize(100, 150)->save($destinationPath.'/tumbnail/100x150/'.$fileName);
+
         }
         $email->save() ;
         if($email['state'] == 0){
